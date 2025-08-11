@@ -1,0 +1,287 @@
+/* Navbar container styling - fixed at top */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 1%;
+    background-color: rgba(85, 66, 61, 0.8); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Adds the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: none; /* Initial no shadow */
+    transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Sticky Header with Box Shadow */
+.header.is_stuck {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); /* Add shadow when stuck */
+}
+
+
+/* Logo styling */
+.logo {
+    font-size: 32px;
+    color: var(--text-color);
+    font-weight: 300;
+    text-decoration: none;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.bold {
+    font-weight: 700;
+}
+
+.logon-options {
+    margin-left: 15px;
+}
+
+.logon-button {
+    margin-left: -25px;
+}
+
+.logon-button:hover {
+    border: 2px solid var(--text-color);
+}
+
+.logon-button {
+    background-color: var(--green-background);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; 
+}
+
+/* Basic navigation link styling */
+.nav-bar a {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-left: 40px;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Underline animation for nav links */
+.underline::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--text-color);
+    transition: width 0.3s;
+}
+
+.nav-bar a:hover::before {
+    width: 100%;
+}
+.nav-bar.mobile-menu {
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    background-color: #140D0B;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+    
+}
+
+.nav-bar.mobile-menu a {
+    font-size: 24px;
+    color: #FFC0AD;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.nav-bar.mobile-menu a:hover {
+    background-color: #C57B57;;
+}
+
+/* Contact link styling */
+.contact {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+img {
+    width: 3.125rem;
+    height: auto;
+}
+.hamburger {
+    display: none;
+}
+.close-icon{
+    
+    font-size: 24px;
+    color: #FFC0AD;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    z-index: 1001;
+
+}
+.visible{
+
+    
+    display: block;
+}
+.close-icon.invisible{
+    display: none;
+}
+/* Hover effect for close-icon */
+.close-icon:hover {
+    color: #C57B57; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect for hamburger */
+.hamburger:hover {
+    color: #C57B57; /* Change color on hover */
+    transform: rotate(90deg) scale(1.1); /* Rotate and slightly enlarge */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+/* .auth-buttons {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+} */
+.auth-buttons {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.auth-buttons span {
+    margin-right: 5px; /* Add some space between the text and the link */
+}
+.auth-button {
+    display: block;
+    font-size: 18px;
+    color: #FFC0AD; /* Text color */
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+/* Sign Up button styling */
+.auth-button.sign-up {
+    background-color: #C57B57; /* Background color for the button */
+    color: #FFF3EC; /* Text color */
+    padding: 10px 0;
+    width: 80%;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.auth-buttons .login-container {
+    display: flex; /* Use flexbox for the text and link */
+    align-items: center; /* Center items vertically */
+    white-space: nowrap;
+}
+
+.auth-button.sign-up:hover {
+    background-color: #55423D; /* Hover color */
+}
+
+/* Sign In link styling */
+.auth-button.login {
+    color: #C57B57;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.auth-button.login:hover {
+    color: #FFC0AD; /* Hover color */
+    text-decoration: underline;
+}
+.signUpLoginBiggerScreen{
+    
+    margin-top: 100px;
+    position: fixed;
+    right: 0;
+    top: 1px;
+
+}
+.signUpLoginButtonBiggerScreen { 
+    
+    background-color: #C57B57;  
+    color: #FFF3EC; 
+    padding: 10px 5px; 
+    width: 6%; 
+    border-radius: 4px; 
+    text-align: center; 
+    margin-bottom: 10px; 
+    margin-left: 4px; 
+}
+.signUpLoginButtonBiggerScreen:hover {
+    background-color: #55423D;
+}
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: block; /* Show hamburger icon only on mobile */
+        font-size: 24px;
+        color: #FFC0AD;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px;  /* Adjust as needed * /
+        /* z-index: 101; Ensure it stays above other elements  */
+    }
+    
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-bar.mobile-menu {
+        display: flex; /* Display as flex for mobile */
+        flex-direction: column;
+        padding-top: 20%;
+    }
+
+    .nav-bar.mobile-menu a {
+        display: block; /* Ensures each link is block-level */
+        color: #FFC0AD;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-bar.mobile-menu a:hover {
+        background-color: #C57B57; /* Add hover effect color */
+    }
+    .signUpLoginBiggerScreen{
+        display: none;
+    }
+
+   
+
+
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background: #55423D;
+    --text-color: #FFF3EC;
+    --secondary-background: #140D0B;
+    --secondary-text: #F3E7E1;
+    --light-text: #FFF3EC;
+    --green-background: #81A684;
+    --orange-accent: #C57B57;
+    --navbar-height: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 25%;
+}
+

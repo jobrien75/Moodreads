@@ -1,0 +1,166 @@
+/* Centering and container styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full-page height */
+  background-color: var(--background); /* Add a suitable background color */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px; /* Constrain the width */
+  background-color: var(--secondary-background); /* Use a consistent background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  padding: 30px; /* Add inner spacing */
+  text-align: center; /* Center the text */
+}
+
+/* Form content */
+.login-form h2 {
+  margin-bottom: 10px;
+  font-size: 24px; /* Adjust font size */
+  color: var(--text-color); /* Use appropriate text color */
+}
+
+.filler-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff; /* White input background */
+  border: 1px solid var(--secondary-text); /* Subtle border */
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Full width */
+}
+
+.input-box .icon {
+  font-size: 18px;
+  color: var(--secondary-text); /* Match icon color */
+  margin-right: 10px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%; /* Fill available space */
+  font-size: 16px; /* Slightly larger font for better readability */
+  color: #000; /* Black text for better visibility */
+  background: transparent; /* Ensure background inherits from the container */
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* Darker placeholder text for better contrast */
+  font-size: 14px; /* Ensure placeholder text is legible */
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--green-background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--text-color);
+}
+
+.divider {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+  color: var(--secondary-text);
+}
+
+.divider span {
+  background: var(--secondary-background);
+  padding: 0 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.divider:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--secondary-text);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.google-signin-button {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid var(--secondary-text);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.google-signin-button img {
+  height: 24px; /* Increase height slightly */
+  width: auto; /* Ensure proportionate scaling */
+  margin-right: 10px; /* Add spacing between the image and text */
+}
+
+.google-signin-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.signup-link a {
+  color: var(--green-background);
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.remember-me {
+  font-size: 14px;
+  color: var(--text-color); /* Use the text color variable or replace with a specific color */
+}
+
+.forgot-password-link {
+  font-size: 14px;
+  color: #007bff; /* Blue link color */
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker blue on hover */
+}
